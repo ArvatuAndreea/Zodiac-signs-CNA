@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_package = "proto";
+
+service ZodiacService{
+  rpc getSign(SignRequest) returns (SignResponse);
+}
+
+message SignRequest {
+  string date = 1;
+}
+
+message SignResponse {
+  string zodiac_sign = 1;
+}
